@@ -48,7 +48,6 @@ export default function EditTodo({ todo }: { todo: Itodo }) {
     title: todo.title,
     body: todo.body as string,
     completed: todo.completed,
-    
   };
 
   const form = useForm<TodoFormValues>({
@@ -63,8 +62,6 @@ export default function EditTodo({ todo }: { todo: Itodo }) {
       title: data.title,
       body: data.body as string,
       completed: data.completed,
-  
-      
     });
     setLoading(false);
     form.reset();
