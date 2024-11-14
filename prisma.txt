@@ -1,0 +1,11 @@
+Les etape pour la creation du la database et sa connexion avec   prisma :
+
+1/creer la base de donnée sur mongodb
+2/sur vscode creer le .ev dans le quel je mis l'url de la conexion de la base de données
+3/créer un dossier prisma dans le quel je crées un fichier schema.prisma pour metre les model de ma base de données (regarde le fichier schema.prisma )
+4/je créer la base de données avec la commande "npx prisma db push"
+5/je créer un fichier seed.ts dans le dossier prisma (consulte le fichier seed.ts)
+6/Dans le fichier package.json j'ajoute cette ligne (  "prisma": {
+  "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+},)
+7/je lance la commande "npx prisma db seed"
