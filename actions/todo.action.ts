@@ -15,7 +15,7 @@ export const getAllTodos = async ({userId}:{userId:string | null})=>{
 
 }
 
-export const updateTodo = async ({id,userId,title,body,completed}:{id:string,title:string,body:string | undefined,completed:boolean,userId:string|null})=>{
+export const updateTodo = async ({id,title,body,completed}:{id:string,title:string,body:string | undefined,completed:boolean})=>{
    await prisma.todo.update({
     where: {
       id
@@ -25,7 +25,7 @@ export const updateTodo = async ({id,userId,title,body,completed}:{id:string,tit
       title,
       body,
       completed,
-      user_id:userId as string
+    
     }
     
   })
