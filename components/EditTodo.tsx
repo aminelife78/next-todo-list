@@ -58,7 +58,7 @@ export default function EditTodo({ todo }: { todo: Itodo }) {
   const onSubmit = async (data: TodoFormValues) => {
     setLoading(true);
     await updateTodo({
-      id: todo.id as string,
+      id: todo.id!,
       title: data.title,
       body: data.body as string,
       completed: data.completed,
