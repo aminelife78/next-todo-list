@@ -19,11 +19,4 @@ model Todo {
   createAt DateTime @default(now())
 }
 
-model User {
-  id      String   @id @default(auto()) @map("_id") @db.ObjectId
-  email   String   @unique
-  name    String?
-  // Todos   Todo[]
-  
-}
 
